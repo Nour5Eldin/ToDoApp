@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.SettingsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ImageView
         android:id="@+id/top_view"
         android:layout_width="match_parent"
@@ -43,12 +42,12 @@
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTV_languages"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:fontFamily="@font/poppins_bold"
             android:inputType="none"
             android:text="English"
-            android:backgroundTint="@color/lime"
-            android:background="@drawable/white_box"
+            android:background="@drawable/settings_background"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:textColor="@color/blue" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,7 +72,6 @@
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-
         app:boxBackgroundColor="@color/color_bg"
 
         android:layout_marginEnd="30dp"
@@ -85,15 +83,14 @@
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTV_modes"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:fontFamily="@font/poppins_bold"
-            android:backgroundTint="@color/lime"
-            android:background="@drawable/white_box"
             android:inputType="none"
             android:text="Light"
+            android:background="@drawable/settings_background"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:textColor="@color/blue"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

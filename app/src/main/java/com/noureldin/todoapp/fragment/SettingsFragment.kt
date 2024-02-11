@@ -14,13 +14,13 @@ import com.noureldin.todoapp.utils.LocaleManager
 import com.noureldin.todoapp.utils.getCurrentLanguage
 
 class SettingsFragment : Fragment() {
-    private lateinit var binding: FragmentSettingsBinding
+    lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSettingsBinding.inflate(layoutInflater)
+        binding = FragmentSettingsBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

@@ -18,12 +18,24 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initListeners()
         tasksFragment = TaskFragment()
+
+
+        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+            if (menuItem.itemId == R.id.tasks) {
+                showFragment(tasksFragment!!)
+                binding.title.text = getString(R.string.to_do_list)
+            } else if (menuItem.itemId == R.id.settings) {
+                showFragment(SettingsFragment())
+                binding.title.text = getString(R.string.settings)
+                Log.e("HomeActivity/initListeners","${SettingsFragment()}")
+            }
+            true
+        }
         onAddTaskClick()
-
-
     }
+
+
 
     override fun onResume() {
         super.onResume()
@@ -45,19 +57,7 @@ class HomeActivity : AppCompatActivity() {
         bottomSheet.show(supportFragmentManager, "")
     }
 
-    fun  initListeners(){
-       binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
-           if (menuItem.itemId == R.id.tasks) {
-               showFragment(tasksFragment!!)
-               binding.title.text = getString(R.string.to_do_list)
-           } else if (menuItem.itemId == R.id.settings) {
-               showFragment(SettingsFragment())
-               binding.title.text = getString(R.string.settings)
-               Log.e("HomeActivity/initListeners","${SettingsFragment()}")
-           }
-           return@setOnItemSelectedListener true
-       }
-    }
+
 
     private fun showFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()

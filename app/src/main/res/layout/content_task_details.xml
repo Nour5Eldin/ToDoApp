@@ -63,6 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/title"
+                        android:background="@drawable/white_box"
                         android:padding="20dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +83,8 @@
                         android:hint="@string/description"
                         android:lines="5"
                         android:maxLines="5"
-                        android:padding="20dp" />
+                        android:padding="20dp"
+                        android:background="@drawable/white_box"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -104,6 +106,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/select_date"
                         android:padding="10dp"
+                        android:background="@drawable/white_box"
                         app:layout_constraintTop_toBottomOf="@id/description_til" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,6 +126,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/select_time"
+                        android:background="@drawable/white_box"
                         android:padding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,6 +139,7 @@
                     android:text="@string/save"
                     android:textColor="@color/white"
                     android:textSize="18sp"
+                    android:background="@drawable/button_bg"
                     app:layout_constraintTop_toBottomOf="@id/select_time_til" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

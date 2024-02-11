@@ -28,7 +28,7 @@ class AddTaskFragment : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding= FragmentAddTaskBinding.inflate(layoutInflater)
+        binding= FragmentAddTaskBinding.inflate(inflater, container,false)
         // Inflate the layout for this fragment
         return binding.root
     }
