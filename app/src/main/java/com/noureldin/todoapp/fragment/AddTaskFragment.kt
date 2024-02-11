@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.noureldin.todoapp.R
 import com.noureldin.todoapp.dao.TasksDao
 import com.noureldin.todoapp.databinding.FragmentAddTaskBinding
@@ -16,7 +18,7 @@ import com.noureldin.todoapp.utils.showDatePickerDialog
 import com.noureldin.todoapp.utils.showTimePickerDialog
 import java.util.Calendar
 
-class AddTaskFragment : Fragment() {
+class AddTaskFragment : BottomSheetDialogFragment() {
     lateinit var binding: FragmentAddTaskBinding
     lateinit var dao: TasksDao
     private var dateCalender = Calendar.getInstance()
@@ -57,7 +59,7 @@ class AddTaskFragment : Fragment() {
         dao.insertTask(task)
         onTaskAddedListener?.onTaskAdded(task)
 
-
+        dismiss()
     }
 
     override fun onStart() {
@@ -121,6 +123,8 @@ class AddTaskFragment : Fragment() {
             }
         }
     }
+
+
 
     var onTaskAddedListener: OnTaskAddedListener? =null
 

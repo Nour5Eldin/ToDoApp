@@ -6,26 +6,49 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import com.noureldin.todoapp.R
 import com.noureldin.todoapp.databinding.ActivityHomeBinding
+import com.noureldin.todoapp.fragment.AddTaskFragment
 import com.noureldin.todoapp.fragment.SettingsFragment
 import com.noureldin.todoapp.fragment.TaskFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
+    private var tasksFragment: TaskFragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        showFragment(TaskFragment())
+
         initListeners()
-
-
+        tasksFragment = TaskFragment()
+        onAddTaskClick()
 
 
     }
-   fun  initListeners(){
+
+    override fun onResume() {
+        super.onResume()
+        binding.bottomNavigation.selectedItemId = R.id.tasks
+    }
+
+    private fun onAddTaskClick() {
+        binding.fabAddTask.setOnClickListener {
+            showAddTaskBottomSheet()
+        }
+    }
+
+    private fun showAddTaskBottomSheet() {
+        val bottomSheet = AddTaskFragment()
+        bottomSheet.onTaskAddedListener = AddTaskFragment.OnTaskAddedListener{Task ->
+            tasksFragment!!.loadAllTasksOfDate(Task.date!!)
+
+        }
+        bottomSheet.show(supportFragmentManager, "")
+    }
+
+    fun  initListeners(){
        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
            if (menuItem.itemId == R.id.tasks) {
-               showFragment(TaskFragment())
+               showFragment(tasksFragment!!)
                binding.title.text = getString(R.string.to_do_list)
            } else if (menuItem.itemId == R.id.settings) {
                showFragment(SettingsFragment())
