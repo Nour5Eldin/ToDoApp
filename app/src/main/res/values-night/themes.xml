@@ -17,7 +17,7 @@
 
     </style>
 
-    <style name="Base.Theme.ToDoApp.splash" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ToDo.splash" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/black_blue</item>
         <item name="android:windowLightStatusBar">true</item>

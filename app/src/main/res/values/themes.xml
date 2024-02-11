@@ -18,13 +18,13 @@
         <item name="clockHandColor">@color/blue</item>
     </style>
 
-    <style name="Base.Theme.ToDoApp.splash" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ToDo.splash" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/lime</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.ToDoApp." parent="Theme.ToDoApp" />
+    <style name="Theme.ToDo" parent="Theme.ToDoApp" />
 
 
     <style name="splash">
