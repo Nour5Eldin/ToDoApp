@@ -19,6 +19,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/white_box"
         app:cardCornerRadius="20dp"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.8"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +92,6 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
-
                     app:layout_constraintEnd_toStartOf="@+id/select_time_til"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread"
