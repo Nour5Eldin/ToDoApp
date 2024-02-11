@@ -31,6 +31,9 @@ class TaskDetailsActivity : AppCompatActivity() {
         onSelectDateClickListener()
         onSelectTimeClickListener()
         setupToolBar()
+        val task = intent.parcelable<Task>(Constants.TASK_KEY) as Task
+        MyTask.date = task.date
+        MyTask.time = task.time
     }
 
     private fun setupToolBar() {

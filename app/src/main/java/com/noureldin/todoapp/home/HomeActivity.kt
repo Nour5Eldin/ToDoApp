@@ -11,7 +11,7 @@ import com.noureldin.todoapp.fragment.SettingsFragment
 import com.noureldin.todoapp.fragment.TaskFragment
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
+    lateinit var binding: ActivityHomeBinding
     private var tasksFragment: TaskFragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         tasksFragment = TaskFragment()
-
 
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
             if (menuItem.itemId == R.id.tasks) {
