@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ToDoApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ToDoApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">#254875</item>
@@ -46,7 +46,7 @@
     <style name="fab_rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
-        <item name="background">@drawable/button_bg</item>
+        <item name="background">@drawable/button_background</item>
     </style>
 
     <style name="fab_style" parent="Widget.Design.FloatingActionButton">

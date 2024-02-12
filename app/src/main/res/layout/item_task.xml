@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:background="@color/lime">
+
+
     <com.zerobranch.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/swipe_layout"
@@ -14,7 +17,8 @@
         app:draggedItem="@id/drag_item"
         app:layout_constraintTop_toTopOf="parent"
         app:leftItem="@id/left_view"
-        app:swipeDirection="right">
+        app:swipeDirection="right"
+        app:isEnabledSwipe="true">
 
         <ImageView
             android:id="@+id/left_view"
