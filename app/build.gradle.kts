@@ -55,7 +55,6 @@ dependencies {
 
     //swipe to delete library
     implementation("com.github.zerobranch:SwipeLayout:1.3.1")
-
     //calendar
     implementation("com.github.prolificinteractive:material-calendarview:2.0.0")
 
