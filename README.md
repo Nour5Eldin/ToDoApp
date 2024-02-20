@@ -1,7 +1,7 @@
 <h1>ToDoListApp</h1>
 
 <p >  
-ToDoList App demonstrates modern Android development with Hilt, Coroutines, LiveData, Jetpack (Room, ViewModel), and Material 3 Design based on MVVM architecture. 
+ToDoList App demonstrates modern Android development with (Room, DataBase),LocaleManager,Material 3 Design and Navigattion Standard Bottom NavigationView . 
 </p>
 
 # Screenshots:
@@ -11,8 +11,6 @@ ToDoList App demonstrates modern Android development with Hilt, Coroutines, Live
 ![task delete](https://github.com/Nour5Eldin/ToDoApp/assets/145837378/7e090868-a09c-42b8-a59d-d0b3bd1a22e7)
 ![task done](https://github.com/Nour5Eldin/ToDoApp/assets/145837378/9dba6f49-117d-42a5-9fbc-78dc11c231bf)
 ![settings](https://github.com/Nour5Eldin/ToDoApp/assets/145837378/9871d2f6-2f0c-4372-be6b-93bd9e81c064)
-
-# ScreenRecord :
 
 ## Tech stack & Open-source libraries
 - Minimum SDK level 26
