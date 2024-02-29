@@ -14,6 +14,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:background="@color/blue">
 
             <TextView
@@ -29,33 +30,27 @@
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomBar"
         style="@style/bottom_nav_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/color_bg"
         app:fabAnchorMode="cradle"
+        app:fabCradleMargin="12sp"
         app:fabAlignmentMode="center"
-        app:fabCradleRoundedCornerRadius="8dp"
-        app:fabCradleMargin="10dp"
-        app:fabCradleVerticalOffset="8dp">
+        app:contentInsetStart="0dp"
+        app:elevation="8dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
+            style="@style/Widget.MaterialComponents.BottomNavigationView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
-            android:background="@color/color_bg"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             app:elevation="0dp"
-            app:itemActiveIndicatorStyle="@null"
-            app:itemBackground="@null"
-            app:itemIconSize="25dp"
-            app:itemIconTint="@color/selector_btm_nav_icon"
-            app:labelVisibilityMode="unlabeled"
             app:menu="@menu/nav_menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
@@ -65,10 +60,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue"
+        android:background="@color/white"
         android:src="@drawable/ic_add"
-        android:tintMode="@color/white"
-        app:layout_anchor="@id/bottomBar"
-         />
+        app:borderWidth="3dp"
+        app:layout_anchor="@id/bottomBar" />
 
 
     <include

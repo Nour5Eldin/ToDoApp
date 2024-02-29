@@ -14,7 +14,7 @@
     </style>
 
     <style name="ThemeOverlay.App.TimePicker" parent="Widget.Material3.MaterialTimePicker.Clock">
-        <item name="clockFaceBackgroundColor">@color/blue</item>
+        <item name="clockFaceBackgroundColor">@color/lime</item>
         <item name="clockHandColor">@color/blue</item>
     </style>
 

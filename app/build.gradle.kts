@@ -58,6 +58,8 @@ dependencies {
     //calendar
     implementation("com.github.prolificinteractive:material-calendarview:2.0.0")
 
+    implementation ("com.kizitonwose.calendar:view:2.3.0")
+
 
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
